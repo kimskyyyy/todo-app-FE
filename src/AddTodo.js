@@ -22,7 +22,7 @@ class AddTodo extends React.Component {
     // onButtonClick함수: 사용자가 '+'버튼을 클릭할 때 실행되며, onInputChange에서 저장하고 있던 문자열을 리스트에 추가
     onButtonClick = () => {
         this.add(this.state.item); // add 함수 사용
-        this.setState({item: {this: ""}});
+        this.setState({item: {title: ""}});
     }
 
     // enterKeyEventHandler함수: 사용자가 input 필드상에서 엔터 또는 리턴키를 눌렀을 때 실행되며 기능은 onButtonClick과 같음
@@ -47,15 +47,15 @@ class AddTodo extends React.Component {
                         />
                     </Grid>
                     <Grid xs={1} md={1} item>
-                        <Button 
-                            fullWidth color="secondary" 
+                        <Button
+                            fullWidth 
+                            color="secondary" 
                             variant="outlined"
                             onClick={this.onButtonClick}
                             >
-                                +
+                            +
                         </Button>
                     </Grid>
-
                 </Grid>
             </Paper>
 

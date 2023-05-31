@@ -9,6 +9,7 @@ class Todo extends React.Component {
         // this.state를 item 변수와 props.item으로 초기화
         this.state = {item: props.item, readOnly: true};
         this.delete = props.delete;
+        this.update = props.update;
     }
 
     deleteEventHandler = () => {
@@ -40,6 +41,7 @@ class Todo extends React.Component {
         const thisItem = this.state.item;
         thisItem.done = !thisItem.done;
         this.setState({item: thisItem});
+        this.update(this.state.item);
         console.log(this.state)
     }
 
